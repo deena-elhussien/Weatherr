@@ -20,7 +20,7 @@ btn.addEventListener("click" , function(){
 
 // basic location when i open the site
 async function getBasicLoc(){
-  const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=34e33b010a604f9296c190337241206&q=damanhour&days=3&aqi=no&alerts=no`)
+  const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=34e33b010a604f9296c190337241206&q=damanhour&days=3&aqi=no&alerts=no`)
   const data= await response.json() 
   // console.log(data);
   displayFirstDay(data)
@@ -34,7 +34,7 @@ getBasicLoc()
 
 // get dynamic location from user
 async function getData(res){
-  const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=34e33b010a604f9296c190337241206&q=${res}&days=3&aqi=no&alerts=no`)
+  const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=34e33b010a604f9296c190337241206&q=${res}&days=3&aqi=no&alerts=no`)
   const data= await response.json() 
   console.log(data);
   displayFirstDay(data)
